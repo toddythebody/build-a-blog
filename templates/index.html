@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+<h3>
+  <a href="index.html">Main Blog Page</a>
+  <a href="entry.html">Add a Post</a>
+</h3>
+<hr>
+<h1 style="text-align:center">Build a Blog</h1>
+
+{% for post in posts %}
+  <ul>
+    <li><h2><a href="post.html">{{name}}</a></h2>
+      <p>{{body}}</p>
+  </ul>
+{% endfor %}
