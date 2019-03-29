@@ -13,7 +13,7 @@ class Entry(db.Model):
     name = db.Column(db.String(200))
     body = db.Column(db.String(2000))
 
-    def __init__(self, name, body, date):
+    def __init__(self, name, body):
         self.name = name
         self.body = body
 
@@ -24,6 +24,24 @@ def index():
     blogPosts = Entry.query.all()
 
     return render_template('index.html', title="Main Page", posts=blogPosts)
+
+@app.route('/entry')
+def entry():
+    return render_template('entry.html', title="Make a Post")
+
+@app.route('/posted', methods=['POST', 'GET'])
+def posted():
+
+    if request.method == 'POST':
+        postName = request.form['name']
+        postBody = request.form['body']
+        newPost = Entry(postName, postBody)
+        db.session.add(newPost)
+        db.session.commit()
+
+    Blog = Entry.query.all()
+
+    return render_template('posted.html', title="posted", Blog=Blog)
 
 if __name__ == "__main__":
     app.run()
