@@ -20,7 +20,10 @@ class Entry(db.Model):
 
 @app.route('/')
 def index():
-    pass
+
+    blogPosts = Entry.query.all()
+
+    return render_template('index.html', title="Main Page", posts=blogPosts)
 
 if __name__ == "__main__":
     app.run()
