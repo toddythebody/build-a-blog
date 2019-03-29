@@ -11,7 +11,7 @@
 <p>No posts yet</p>
 {% else %}
   <ul>
-{% for post in posts %}
+{% for post in posts|reverse %}
     <li><h2><a href="/posted?id={{post.id}}">{{post.name}}</a></h2>
       <p>{{post.body}}</p>
 {% endfor %}
