@@ -1,15 +1,20 @@
 {% extends 'base.html' %}
 
+{% block content %}
 <h3>
-  <a href="index.html">Main Blog Page</a>
-  <a href="entry.html">Add a Post</a>
+  <a href="/">Main Blog Page</a>
+  <a href="/entry">Add a Post</a>
 </h3>
 <hr>
 <h1 style="text-align:center">Build a Blog</h1>
-
+{% if posts|length == 0 %}
+<p>No posts yet</p>
+{% else %}
   <ul>
 {% for post in posts %}
-    <li><h2><a href="posted.html">{{post.name}}</a></h2>
+    <li><h2><a href="/posted?id={{post.id}}">{{post.name}}</a></h2>
       <p>{{post.body}}</p>
 {% endfor %}
   </ul>
+{% endif %}
+{% endblock %}

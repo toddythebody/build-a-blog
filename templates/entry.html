@@ -2,17 +2,19 @@
 
 {% block content %}
 <h3>
-  <a href="index.html">Main Blog Page</a>
-  <a href="entry.html">Add a Post</a>
+  <a href="/">Main Blog Page</a>
+  <a href="/entry">Add a Post</a>
 </h3>
 <hr>
 <h1 style="text-align:center">New Post</h1>
 <hr>
 <form action="/posted" method="POST">
-  <label for="title">Title: </label>
+  <label for="title">Title: </label><br>
     <input id="title" type="text" name="name" required>
-  <label for="body"></label>
-    <textarea id="body" name="body" rows="20" cols="60"></textarea>
+  <br>
+  <br>
+  <label for="body">Entry</label><br>
+    <textarea id="body" name="body" rows="20" cols="60"></textarea><br>
   <input type="submit">
 </form>
 

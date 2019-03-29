@@ -38,10 +38,15 @@ def posted():
         newPost = Entry(postName, postBody)
         db.session.add(newPost)
         db.session.commit()
+        postQuery = Entry.query.get(newPost.id)
+        return render_template('posted.html', title=postName, postName=postName, postBody=postBody,
+            postQuery=postQuery)
+    else:
+        postId = int(request.args.get('id'))
+        postQuery = Entry.query.get(postId)
+        Name = postQuery.name
 
-    Blog = Entry.query.all()
-
-    return render_template('posted.html', title="posted", Blog=Blog)
+        return render_template('posted.html', title=Name, postQuery=postQuery)
 
 if __name__ == "__main__":
     app.run()
