@@ -1,11 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>
-  <a href="/">Main Blog Page</a>
-  <a href="/entry">Add a Post</a>
-</h3>
-<hr>
-<h1 style="text-align:center">{{postQuery.name}}</h1>
+<h1>{{postQuery.name}}</h1>
 <p>{{postQuery.body}}</p>
 {% endblock %}

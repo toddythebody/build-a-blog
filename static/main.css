@@ -1,0 +1,36 @@
+body {
+    background-color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+h3 a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin; 0 15%;
+}
+
+.mainPage::before {
+    display: inline;
+    content: "Living Diary";
+    font-weight: 900;
+    position: relative;
+    left: 0;
+    width: 5vw;
+    background-color: black;
+}
+
+.postPage::after {
+    display: inline;
+    content: "hello";
+    background-color: green;
+    width: 20vw;
+}
