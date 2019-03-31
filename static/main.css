@@ -4,12 +4,19 @@ body {
 
 h1 {
   text-align: center;
+    color: white;
+    background-color: darkred;
+    width: 450px;
+    margin: auto;
+    font-size: 3.5em;
+    border: 10px double black;
 }
 
 h3 {
     background-color: slategray;
     position: relative;
     height: 4em;
+    border: 2px solid black;
 }
 
 h3 a {
@@ -32,12 +39,13 @@ h3 a {
     max-width: 500px;
     min-width: 350px;
     padding-left: 5px;
-    transition: .5s;
+    border-right: 2px solid black;
+    transition: color .5s, background-color .5s;
 }
 
 .mainPage:hover {
-    background-color: dark;
-    color: darkgray;
+    background-color: indianred;
+    color: black;
 }
 
 .postPage {
@@ -52,10 +60,134 @@ h3 a {
     text-align: center;
     font-size: 20px;
     padding: 8px 2vw 0px 2vw;
-    transition: .5s;
+    transition: color .5s, background-color .5s;
+    border: 2px solid black;
 }
 
 .postPage:hover {
-    background-color: darkgray;
+    background-color: gainsboro;
     color: black;
+}
+
+ul {
+    text-align: center;
+    background-color: slategray;
+    margin: 20px 10%;
+    border: 10px solid black;
+    border-radius: 20px;
+    list-style-type: none;
+}
+
+li h2 {
+    font-size: 2em;
+    border-bottom: 2px solid black;
+}
+
+li p {
+    font-size: 1.5em;
+    background-color: dimgray;
+    width: 70%;
+    margin: 10px auto;
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 10px 3px;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    transition: color .5s;
+}
+
+li a:hover {
+    color: gainsboro;
+}
+
+#posted p {
+    text-align: center;
+    background-color: slategray;
+    margin: 20px 10%;
+    border: 10px solid black;
+    border-radius: 20px;
+    height: auto;
+    overflow: visible;
+    font-size: 6vh;
+    padding: 3% 10px;
+}
+
+form {
+    display: block;
+    text-align: center;
+    background-color: slategray;
+    margin: 20px 10%;
+    border: 10px solid black;
+    border-radius: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+label[for="title"] {
+    position: relative;
+    left: calc(-25% + 30px);
+}
+
+input[type="text"] {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+    font-size: 30px;
+    background-color: gainsboro;
+    outline: none;
+    border: 2px solid black;
+    transition: background-color .25s;
+    padding-left: 10px;
+}
+
+input[type="text"]:focus {
+    background-color: white;
+}
+
+label[for="body"] {
+    position: relative;
+    left: calc(-30% + 35px);
+}
+
+input[type="submit"] {
+    display: block;
+    font-size: 50px;
+    position: absolute;
+    left: calc(50% - 100px);
+    bottom: -100px;
+    border: 2px solid black;
+    background-color: slategray;
+    transition: background-color .25s;
+}
+
+input[type="submit"]:hover {
+    background-color: gainsboro;
+}
+
+textarea {
+    display: block;
+    resize: none;
+    margin: auto;
+    height: 350px;
+    font-size: 30px;
+    background-color: gainsboro;
+    width: 60%;
+    margin-bottom: 10px;
+    outline: none;
+    border: 2px solid black;
+    transition: background-color .25s;
+    padding-left: 10px;
+}
+
+textarea:focus {
+    background-color: white;
 }

@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>New Post</h1>
+<h1>What's on your mind?</h1>
 <form action="/posted" method="POST">
   <label for="title">Title: </label>
     <input id="title" type="text" name="name" required>
-  <label for="body">Entry</label>
+  <label for="body">Entry:</label>
     <textarea id="body" name="body" required></textarea>
-  <input type="submit">
+  <input type="submit" value="Publish">
 </form>
 
 {% endblock %}

@@ -23,7 +23,7 @@ def index():
 
     blogPosts = Entry.query.all()
 
-    return render_template('index.html', title="Main Page", posts=blogPosts)
+    return render_template('index.html', title="Living Diary", posts=blogPosts)
 
 @app.route('/entry')
 def entry():
