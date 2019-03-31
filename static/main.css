@@ -2,6 +2,11 @@ body {
     background-color: gainsboro;
 }
 
+html *::selection {
+    background-color: darkred;
+    color: white;
+}
+
 h1 {
   text-align: center;
     color: white;
@@ -80,39 +85,45 @@ ul {
 
 li h2 {
     font-size: 2em;
-    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
 }
 
 li p {
     font-size: 1.5em;
-    background-color: dimgray;
+    background-color: darkgray;
     width: 70%;
-    margin: 10px auto;
-    border: 4px solid black;
+    margin: 10px auto 40px auto;
+    border: 2px solid black;
     border-radius: 10px;
-    padding: 10px 3px;
+    padding: 10px 10px;
+    text-align: left;
 }
 
 li a {
     text-decoration: none;
     color: black;
-    transition: color .5s;
+    background-color: dimgray;
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 10px 3px;
+    transition: background-color .5s;
 }
 
 li a:hover {
-    color: gainsboro;
+    background-color: gainsboro;
 }
 
 #posted p {
-    text-align: center;
+    text-align: left;
     background-color: slategray;
     margin: 20px 10%;
     border: 10px solid black;
     border-radius: 20px;
     height: auto;
     overflow: visible;
-    font-size: 6vh;
-    padding: 3% 10px;
+    font-size: 4vh;
+    padding: 3% 100px;
 }
 
 form {
