@@ -35,6 +35,15 @@ def posted():
     if request.method == 'POST':
         postName = request.form['name']
         postBody = request.form['body']
+        errName = ''
+        errBody = ''
+        if postName == '' or postBody == '':
+            if postName == '':
+                errName = "Text Required"
+            if postBody == '':
+                errBody = "Text Required"
+            return render_template('entry.html', title="Make a Post",
+                postName=postName, postBody=postBody, errName=errName, errBody=errBody)
         newPost = Entry(postName, postBody)
         db.session.add(newPost)
         db.session.commit()

@@ -4,9 +4,11 @@
 <h1>What's on your mind?</h1>
 <form action="/posted" method="POST">
   <label for="title">Title: </label>
-    <input id="title" type="text" name="name" required>
+    <p id="errName">{{errName}}</p>
+    <input id="title" type="text" name="name" value="{{postName}}">
   <label for="body">Entry:</label>
-    <textarea id="body" name="body" required></textarea>
+    <p id="errBody">{{errBody}}</p>
+    <textarea id="body" name="body">{{postBody}}</textarea>
   <input type="submit" value="Publish">
 </form>
 
