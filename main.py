@@ -17,12 +17,9 @@ class Entry(db.Model):
         self.name = name
         self.body = body
 
-
 @app.route('/')
 def index():
-
     blogPosts = Entry.query.all()
-
     return render_template('index.html', title="Living Diary", posts=blogPosts)
 
 @app.route('/entry')
@@ -31,7 +28,6 @@ def entry():
 
 @app.route('/posted', methods=['POST', 'GET'])
 def posted():
-
     if request.method == 'POST':
         postName = request.form['name']
         postBody = request.form['body']
@@ -54,7 +50,6 @@ def posted():
         postId = int(request.args.get('id'))
         postQuery = Entry.query.get(postId)
         Name = postQuery.name
-
         return render_template('posted.html', title=Name, postQuery=postQuery)
 
 if __name__ == "__main__":
